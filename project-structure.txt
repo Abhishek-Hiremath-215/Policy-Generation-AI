@@ -1,0 +1,55 @@
+frontend/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── Layout.jsx
+│   │   ├── admin/
+│   │   │   ├── ProjectList.jsx
+│   │   │   ├── ProjectForm.jsx
+│   │   │   ├── FileUpload.jsx
+│   │   │   ├── DatabaseSourceForm.jsx
+│   │   │   ├── URLSourceForm.jsx
+│   │   │   └── DataSourceList.jsx
+│   │   ├── user/
+│   │   │   ├── ProjectSelector.jsx
+│   │   │   ├── PolicyGenerator.jsx
+│   │   │   └── PolicyStatus.jsx
+│   │   ├── common/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   ├── Spinner.jsx
+│   │   │   └── ProgressBar.jsx
+│   │   └── icons/
+│   │       └── Icons.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── AdminDashboard.jsx
+│   │   ├── UserDashboard.jsx
+│   │   └── NotFound.jsx
+│   ├── services/
+│   │   └── api.js
+│   ├── hooks/
+│   │   ├── useProjects.js
+│   │   ├── useDocuments.js
+│   │   └── usePolicies.js
+│   ├── utils/
+│   │   ├── constants.js
+│   │   └── helpers.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── .env
+├── .env.example
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── vite.config.js
+└── README.md

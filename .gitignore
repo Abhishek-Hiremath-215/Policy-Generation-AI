@@ -1,0 +1,57 @@
+# Dependency directories
+node_modules/
+venv/
+.venv/
+env/
+ENV/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+
+# Local configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.tox/
+
+# SQLite databases or local DBs
+*.db
+*.db-journal
+*.sqlite3
+*.sqlite
+
+# Application-specific folders (backend uploads and outputs)
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/generated_policies/*
+!backend/generated_policies/.gitkeep
+backend/venv/
+
+# Editor and system files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+*.log
