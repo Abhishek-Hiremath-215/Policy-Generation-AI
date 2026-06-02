@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   const showSidebar = location.pathname.startsWith('/admin');
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50 text-slate-800">
       <Navbar />
       
       <div className="flex">

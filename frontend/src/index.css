@@ -70,3 +70,8 @@ input::placeholder, textarea::placeholder {
   color: #9ca3af;
   font-size: 0.9rem;
 }
+
+body {
+  background-color: #f1f5f9; /* Rich slate-100 background instead of default white */
+  color: #0f172a; /* Slate 900 for premium readability */
+}

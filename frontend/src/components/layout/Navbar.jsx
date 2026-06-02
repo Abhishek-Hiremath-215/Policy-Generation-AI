@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-40">
+      <nav className="bg-slate-100/90 border-b border-slate-200 sticky top-0 z-40 backdrop-blur-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -69,33 +69,36 @@ const Navbar = () => {
               })}
             </div>
 
-            {/* Dynamic Status / Demo Mode Indicator */}
-            <div className="flex items-center gap-2">
-              {isMock ? (
+            {/* Subtle status and logout controls shifted to the side (unhighlighted) */}
+            <div className="flex items-center gap-3">
+              {/* Logout Button */}
+              {localStorage.getItem('policy_ai_logged_in') === 'true' && (
                 <button
-                  onClick={() => setShowInfoModal(true)}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-indigo-50 border border-indigo-100 hover:bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold cursor-pointer shadow-sm transition-all hover:scale-105"
+                  onClick={() => {
+                    localStorage.removeItem('policy_ai_logged_in');
+                    localStorage.removeItem('policy_ai_role');
+                    window.location.href = '/login';
+                  }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 border border-red-200 hover:border-red-300 bg-red-50/50 hover:bg-red-100 text-red-600 rounded-lg text-xs font-semibold cursor-pointer shadow-xs transition-all"
                 >
-                  <div className="w-2.5 h-2.5 bg-indigo-600 rounded-full animate-pulse" />
-                  <span>Demo Mode Active</span>
-                  <span className="text-[10px] bg-indigo-200 text-indigo-800 px-1.5 py-0.5 rounded-full font-bold">INFO</span>
-                </button>
-              ) : (
-                <button
-                  onClick={() => setShowInfoModal(true)}
-                  className="flex items-center gap-2 px-3 py-1.5 bg-green-50 border border-green-100 hover:bg-green-100 text-green-700 rounded-full text-xs font-semibold cursor-pointer shadow-sm transition-all hover:scale-105"
-                >
-                  <div className="w-2.5 h-2.5 bg-green-500 rounded-full" />
-                  <span>Local Server Active</span>
-                  <span className="text-[10px] bg-green-200 text-green-800 px-1.5 py-0.5 rounded-full font-bold font-mono">LIVE</span>
+                  <span>Logout</span>
                 </button>
               )}
+
+              {/* Subtle Mode Shifter */}
+              <button
+                onClick={() => setShowInfoModal(true)}
+                className="flex items-center gap-1.5 px-2 py-1 bg-transparent hover:bg-slate-100 text-slate-500 rounded text-xs font-semibold cursor-pointer border-none transition-all shadow-none"
+                title="System Settings"
+              >
+                <span className="text-base select-none">⚙️</span>
+                <span className="hidden sm:inline">{isMock ? 'Demo Mode' : 'Local Server'}</span>
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden border-t border-gray-200 bg-white">
+        <div className="md:hidden border-t border-slate-200 bg-slate-100/95">
           <div className="flex items-center justify-around py-2">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
