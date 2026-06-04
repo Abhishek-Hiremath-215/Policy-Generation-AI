@@ -73,7 +73,7 @@ We have built a **fully interactive, standalone client-side Demo Mode** for this
 *   **Simulate Policy Generation** with a live step-by-step progress indicator (Initializing -> Retrieving -> Synthesizing sections -> Compiling PDF).
 *   **Preview and Download Policies** directly as formatted document files!
 
-👉 **[Launch Live Netlify Demo](https://do-cai.netlify.app/)** *(Replace with your Netlify link once deployed!)*
+👉 **[Launch Live Netlify Demo](https://po-licygenerationai.netlify.app/)** *(Replace with your Netlify link once deployed!)*
 
 ---
 
